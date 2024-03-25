@@ -75,8 +75,8 @@ public class MainActivity extends AppCompatActivity {
         addButton.setOnClickListener(v -> {
 
             androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(MainActivity.this);
-            builder.setTitle("Registrar Contacto");
-            builder.setMessage("Desea registrar el contacto actual.?");
+            builder.setTitle("Guardar Firma");
+            builder.setMessage("Guardar Firma Ahora?");
 
             builder.setPositiveButton("Aceptar", (di, i) ->  Add());
             builder.setNegativeButton("No", (d, i) -> limpiarDatos());
