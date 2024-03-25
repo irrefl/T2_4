@@ -6,6 +6,11 @@ Captura firma del usuario.
 
 ![Firma App](firmaAppDark.png)
 
+
+## Capturas de Pantalla
+
+![Firma App](firmaApp.png)
+
 ## Características
 
 - Captura firma del usuario
