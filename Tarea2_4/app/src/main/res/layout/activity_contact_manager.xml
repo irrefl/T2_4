@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:theme="@style/Theme.Tarea2_2"
+    android:layout_height="match_parent"
+    tools:context=".ContactManagerActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+
+    <SearchView
+        android:id="@+id/search_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        android:queryHint="Buscar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/contactListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_view"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/add_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="?attr/colorTertiary"
+        android:text="Actions"
+        app:icon="@drawable/c_i"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/edit_contact_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="?attr/colorTertiary"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/add_fab"
+        app:layout_constraintEnd_toEndOf="@+id/add_fab"
+        app:srcCompat="@drawable/u_i" />
+
+    <TextView
+        android:id="@+id/add_alarm_action_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Actualizar contacto"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_contact_fab"
+        app:layout_constraintEnd_toStartOf="@+id/edit_contact_fab"
+        app:layout_constraintTop_toTopOf="@+id/edit_contact_fab" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/delete_contact_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="?attr/colorTertiary"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/edit_contact_fab"
+        app:layout_constraintEnd_toEndOf="@+id/edit_contact_fab"
+        app:layout_constraintStart_toStartOf="@+id/edit_contact_fab"
+        app:srcCompat="@drawable/d_i" />
+
+    <TextView
+        android:id="@+id/add_person_action_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Elminar contacto"
+        app:layout_constraintBottom_toBottomOf="@+id/delete_contact_fab"
+        app:layout_constraintEnd_toStartOf="@+id/delete_contact_fab"
+        app:layout_constraintTop_toTopOf="@+id/delete_contact_fab" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/ver_image_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="?attr/colorTertiary"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/delete_contact_fab"
+        app:layout_constraintEnd_toEndOf="@+id/delete_contact_fab"
+        app:srcCompat="@drawable/r_i" />
+
+    <TextView
+        android:id="@+id/ver_imagen_action_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Ver imagen"
+        app:layout_constraintBottom_toBottomOf="@+id/ver_image_fab"
+        app:layout_constraintEnd_toStartOf="@+id/ver_image_fab"
+        app:layout_constraintTop_toTopOf="@+id/ver_image_fab" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/share_image_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="?attr/colorTertiary"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/ver_image_fab"
+        app:layout_constraintEnd_toEndOf="@+id/delete_contact_fab"
+        app:srcCompat="@drawable/share_i" />
+
+    <TextView
+        android:id="@+id/share_image_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Compartir imagen"
+        app:layout_constraintBottom_toBottomOf="@+id/share_image_fab"
+        app:layout_constraintEnd_toStartOf="@+id/share_image_fab"
+        app:layout_constraintTop_toTopOf="@+id/share_image_fab" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

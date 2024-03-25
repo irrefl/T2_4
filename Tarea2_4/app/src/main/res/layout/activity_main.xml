@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fima aqui:"
+            android:gravity="start"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:padding="0.5dp"
+            android:background="?attr/colorPrimary">
+
+            <com.irvinflores.tarea2_4.SignaturePad
+                android:id="@+id/lienzo"
+                android:layout_width="400dp"
+                android:layout_height="159dp"
+                android:background="?attr/colorOnPrimary"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.215" />
+
+        </FrameLayout>
+
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/takePicture"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Limpiar Firma"
+
+            app:cornerRadius="16dp"
+            app:iconGravity="textStart"
+
+            app:iconTint="?attr/colorOnSurface"
+            app:strokeColor="?attr/colorPrimary"
+            app:strokeWidth="4dp" />
+
+        <!-- Material3 TextInputLayout -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:hint="Descripcion"
+
+            app:boxCornerRadiusBottomStart="16dp"
+            app:boxCornerRadiusTopStart="16dp"
+            app:boxStrokeColor="?attr/colorAccent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/Description"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/submitButton"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Salvar"
+
+            app:cornerRadius="16dp"
+            app:icon="@drawable/add_icon"
+            app:iconGravity="textStart"
+
+            app:iconTint="?attr/colorOnSurface"
+            app:strokeColor="?attr/colorPrimary"
+            app:strokeWidth="4dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/photoListButton"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Firmas Guardadas"
+
+            app:cornerRadius="16dp"
+            app:icon="@drawable/user_pic"
+            app:iconGravity="textStart"
+
+            app:iconTint="?attr/colorOnSurface"
+            app:strokeColor="?attr/colorPrimary"
+            app:strokeWidth="4dp" />
+
+
+
+    </LinearLayout>
+
+</ScrollView>
