@@ -13,12 +13,12 @@ import com.irvinflores.tarea2_4.Domain.Photograph;
 import java.util.ArrayList;
 
 
-public class PhotographRepo extends DataIgniter {
+public class SignatureRepo extends DataIgniter {
 
     private Context context;
 
 
-    public PhotographRepo(Context c) {
+    public SignatureRepo(Context c) {
         super(c);
         context = c;
     }

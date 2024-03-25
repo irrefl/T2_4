@@ -23,7 +23,7 @@ import com.irvinflores.tarea2_4.Application.Encoders.IEncoderFactory;
 import com.irvinflores.tarea2_4.Application.Encoders.PhotoEncoder;
 import com.irvinflores.tarea2_4.Application.Validations.DescriptionTextWatcher;
 import com.irvinflores.tarea2_4.Application.Validations.DescriptionInputValidation;
-import com.irvinflores.tarea2_4.Database.PhotographRepo;
+import com.irvinflores.tarea2_4.Database.SignatureRepo;
 import com.irvinflores.tarea2_4.Domain.Photograph;
 
 import java.io.File;
@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
                 .setImageBase64(imageBase64)
                 .build();
 
-        PhotographRepo dbPersonas = new PhotographRepo(myAppContext);
+        SignatureRepo dbPersonas = new SignatureRepo(myAppContext);
         long id = dbPersonas.Add(photo);
 
         if (id >= 0) {

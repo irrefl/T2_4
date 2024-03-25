@@ -17,7 +17,7 @@ import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.irvinflores.tarea2_4.Application.ContactListAdapter;
-import com.irvinflores.tarea2_4.Database.PhotographRepo;
+import com.irvinflores.tarea2_4.Database.SignatureRepo;
 import com.irvinflores.tarea2_4.Domain.Photograph;
 
 
@@ -36,7 +36,7 @@ public class ContactManagerActivity extends AppCompatActivity implements SearchV
     ArrayList<Photograph> contactsArray;
     RecyclerView contactList;
 
-    PhotographRepo photographRepo;
+    SignatureRepo signatureRepo;
     ContactListAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,9 +80,9 @@ public class ContactManagerActivity extends AppCompatActivity implements SearchV
         findViewById(R.id.ver_image_fab).setVisibility(View.GONE);
         findViewById(R.id.ver_imagen_action_text).setVisibility(View.GONE);
 
-        photographRepo = new PhotographRepo(this);
+        signatureRepo = new SignatureRepo(this);
 
-        contactsArray = photographRepo.Get();
+        contactsArray = signatureRepo.Get();
 
         contactList.setLayoutManager(new LinearLayoutManager(this));
         adapter = new ContactListAdapter(contactsArray);
@@ -155,7 +155,7 @@ public class ContactManagerActivity extends AppCompatActivity implements SearchV
                         return;
                     }
 
-                    photographRepo.DeleteBy(adapter.Id  );
+                    signatureRepo.DeleteBy(adapter.Id  );
                     lista();
                     Toast.makeText(getApplicationContext(), "Contacto removido", Toast.LENGTH_SHORT).show();
 
@@ -166,7 +166,7 @@ public class ContactManagerActivity extends AppCompatActivity implements SearchV
     }
 
     private void sharePic(int id) {
-        Photograph contactSelected = photographRepo.GetBy(id);
+        Photograph contactSelected = signatureRepo.GetBy(id);
 
         String message = new StringBuilder()
                 .append("description: ").append(contactSelected.getDescription()).append("\n")

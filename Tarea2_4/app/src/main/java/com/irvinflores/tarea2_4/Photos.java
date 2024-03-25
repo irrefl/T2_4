@@ -13,7 +13,7 @@ import android.view.MenuItem;
 import android.widget.SearchView;
 
 import com.irvinflores.tarea2_4.Application.ContactListAdapter;
-import com.irvinflores.tarea2_4.Database.PhotographRepo;
+import com.irvinflores.tarea2_4.Database.SignatureRepo;
 import com.irvinflores.tarea2_4.Domain.Photograph;
 
 import java.util.ArrayList;
@@ -23,7 +23,7 @@ public class Photos extends AppCompatActivity implements SearchView.OnQueryTextL
     SearchView search_view;
     ArrayList<Photograph> contactsArray;
     RecyclerView contactList;
-    PhotographRepo photographRepo;
+    SignatureRepo signatureRepo;
     ContactListAdapter adapter;
 
     @Override
@@ -44,9 +44,9 @@ public class Photos extends AppCompatActivity implements SearchView.OnQueryTextL
         contactList = findViewById(R.id.contactListView);
         search_view= findViewById(R.id.search_view);
 
-        photographRepo = new PhotographRepo(this);
+        signatureRepo = new SignatureRepo(this);
 
-        contactsArray = photographRepo.Get();
+        contactsArray = signatureRepo.Get();
 
         contactList.setLayoutManager(new LinearLayoutManager(this));
         adapter = new ContactListAdapter(contactsArray);

@@ -10,8 +10,8 @@ import androidx.annotation.Nullable;
 public class DataIgniter extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
-    private static final String Database = "photographs.db";
-    public static final String TABLE = "photographs";
+    private static final String Database = "signatures.db";
+    public static final String TABLE = "signatures";
 
     public DataIgniter(@Nullable Context context) {
         super(context, Database, null, DATABASE_VERSION);
